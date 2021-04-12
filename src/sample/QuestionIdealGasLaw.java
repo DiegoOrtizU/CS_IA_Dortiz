@@ -1,14 +1,13 @@
 package sample;
 
 import java.util.Random;
-import java.util.Scanner;
+
 
 public class QuestionIdealGasLaw {
 
 
     public static void main(String [] args){
-        Scanner input = new Scanner(System.in);
-        int sum = 0;
+
 
 
         // Random number generating
