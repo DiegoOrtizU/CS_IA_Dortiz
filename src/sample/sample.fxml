@@ -39,7 +39,7 @@
             <Button fx:id="GASDENSITYTPCBTN" layoutX="345.0" layoutY="250.0" mnemonicParsing="false" text="Gas Density" />
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" visible="false">
          <children>
             <Label layoutX="211.0" layoutY="89.0" text="Ideal Gas Laws" />
             <Label layoutX="21.0" layoutY="138.0" text="Randomized Question:" />
@@ -59,7 +59,7 @@
             <Button fx:id="ANSBTN" layoutX="358.0" layoutY="307.0" mnemonicParsing="false" text="Answer" />
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" visible="false">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
             <Label layoutX="211.0" layoutY="89.0" text="Gas Density" />
             <Label layoutX="21.0" layoutY="138.0" text="Randomized Question:" />
