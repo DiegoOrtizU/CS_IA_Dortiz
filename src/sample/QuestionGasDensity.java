@@ -41,13 +41,80 @@ public class QuestionGasDensity {
         answer = roundanswer;
         if(clientAnswer == answer){
             System.out.println("You are correct!");
-        }
-        else{
-            System.out.println(" Sorry, the correct answer is : " + answer + "Kg/m3");
-        }
+        } else {
+            java.util.Scanner sc = new java.util.Scanner(System.in);
+            System.out.println("Looks like you haven't achieve the correct answer, how do you want to approach this question");
+            System.out.println("H.- Hint");
+            System.out.println("G.- Guide");
+            System.out.println("A.- Answer");
+            String Decision = sc.next();
 
+            switch (Decision) {
+                case "H":
+                    System.out.println("Hint:");
+                    System.out.println("Take in consideration that the answer needs to be rounded to 2 decimal places");
+                    System.out.println("Now lets have a second look at the question");
+                    System.out.println("Input the correct answer:");
+                    clientAnswer = new Scanner(System.in).nextDouble();
+                    if (clientAnswer == answer) {
+                        System.out.println("You are correct!");
+                    } else {
+                        System.out.println("You have gotten the wrong answer");
+                        System.out.println("Don't worry you can still approach the question different ways");
+                        System.out.println("G.- Guide");
+                        System.out.println("A.- Answer");
+                        String HelpDecision = sc.next();
+
+                        switch (HelpDecision) {
+                            case "G":
+                                System.out.println("I will guide you towards finding the answer");
+                                System.out.println();
+                                System.out.println("First you need to identify the variable you are looking for which is the Gas Density");
+
+                                System.out.println("Then you will need to identify the values of the variables you are given");
+                                System.out.println("P="+ Pressure + "atm");
+                                System.out.println("M="+ MolarMass + "g/mol");
+                                System.out.println("T="+ Temperature + "K");
+                                System.out.println("R=8.31JK−1⋅mol−1");
+                                System.out.println();
+                                System.out.println("Now you need to replace the variables inside the formula and round it to 2 decimal places");
+                                System.out.println(MolarMass + "*" + Pressure + "/8.31*" + Temperature);
+                                System.out.println("This will give you the answer which is " + answer + "Kg/m3");
+                                break;
+
+                            case "A":
+                                System.out.println("The answer is " + answer + "K");
+                        }
+
+                    }
+
+                    break;
+
+                case "G":
+                    System.out.println("I will guide you towards finding the answer");
+                    System.out.println();
+                    System.out.println("First you need to identify the variable you are looking for which is the Gas Density");
+
+                    System.out.println("Then you will need to identify the values of the variables you are given");
+                    System.out.println("P="+ Pressure + "atm");
+                    System.out.println("M="+ MolarMass + "g/mol");
+                    System.out.println("T="+ Temperature + "K");
+                    System.out.println("R=8.31JK−1⋅mol−1");
+                    System.out.println();
+                    System.out.println("Now you need to replace the variables inside the formula and round it to 2 decimal places");
+                    System.out.println(MolarMass + "*" + Pressure + "/8.31*" + Temperature);
+                    System.out.println("This will give you the answer which is " + answer + "Kg/m3");
+
+                    break;
+
+                case "A":
+                    System.out.println("The answer is " + answer + "Kg/m3");
+            }
+
+        }
 
     }
+
 }
 
 
