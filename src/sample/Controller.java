@@ -65,8 +65,7 @@ public class Controller {
         MAINPANEL.setVisible(true);
         GDINFORMATIONPANEL.setVisible(false);
     }
-//GDQUESTIONSPANEL
-    //QGDMAINWINDOWBTN
+
 
 
     public void IGLNEWQUESTION(){
