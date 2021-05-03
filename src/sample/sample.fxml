@@ -19,19 +19,19 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <AnchorPane fx:id="MAINPANEL" minWidth="400.0" prefHeight="300.0" prefWidth="400.0" visible="false">
+      <AnchorPane fx:id="MAINPANEL" minWidth="400.0" prefHeight="300.0" prefWidth="400.0">
          <children>
             <Button layoutX="65.0" layoutY="180.0" mnemonicParsing="false" onAction="#QUESTIONSIGLNXTWNDW" text="Ideal Gas Law" />
-            <Button layoutX="248.0" layoutY="233.0" mnemonicParsing="false" onAction="#INFORMATIONGDNXTWNDW" text="Gas Density" />
+            <Button layoutX="236.0" layoutY="180.0" mnemonicParsing="false" onAction="#INFORMATIONIGLNXTWNDW" text="Ideal Gas Law" />
             <Label layoutX="123.0" layoutY="56.0" text="Chemistry Practice Questions" />
             <Label layoutX="146.0" layoutY="74.0" />
-            <Button layoutX="243.0" layoutY="180.0" mnemonicParsing="false" onAction="#INFORMATIONIGLNXTWNDW" text="Ideal Gas Law" />
+            <Button layoutX="241.0" layoutY="233.0" mnemonicParsing="false" onAction="#INFORMATIONGDNXTWNDW" text="Gas Density" />
             <Button layoutX="70.0" layoutY="233.0" mnemonicParsing="false" onAction="#QUESTIONSGDNXTWNDW" text="Gas Density" />
             <Label layoutX="81.0" layoutY="141.0" text=" Questions" />
             <Label layoutX="249.0" layoutY="142.0" text="Information" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="IGLQUESTIONSPANEL" prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane fx:id="IGLQUESTIONSPANEL" prefHeight="200.0" prefWidth="200.0" visible="false">
          <children>
             <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#QIGLMAINWINDOWBTN" text="Main Window" />
             <Label layoutX="136.0" layoutY="63.0" text="Ideal Gas Law Questions" />
@@ -40,11 +40,6 @@
             <Label fx:id="IGLQUESTION" layoutX="26.0" layoutY="100.0" prefHeight="81.0" prefWidth="347.0" text="Question:" wrapText="true" />
             <Button fx:id="IGLNEWQUESTIONBTN" layoutX="75.0" layoutY="237.0" mnemonicParsing="false" onAction="#IGLNEWQUESTION" text="New Question" />
             <Button layoutX="246.0" layoutY="196.0" mnemonicParsing="false" onAction="#IGLREGISTERANSWERBTN" text="Register Answer" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="GDQUESTIONSPANEL" prefHeight="200.0" prefWidth="200.0" visible="false">
-         <children>
-            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#QGDMAINWINDOWBTN" text="Main Window" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="GDINFORMATIONPANEL" prefHeight="200.0" prefWidth="200.0" visible="false">
@@ -89,6 +84,17 @@
                   <Image url="https://www.thegreatcoursesdaily.com/wp-content/uploads/2020/05/Explanation-of-Ideal-Gas-Law_QBS-ID-358_2YThumbnail-Image_L3.jpg" />
                </image>
             </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="GDQUESTIONSPANEL" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#QGDMAINWINDOWBTN" text="Main Window" />
+            <Label layoutX="136.0" layoutY="63.0" text="Ideal Gas Law Questions" />
+            <Label layoutX="26.0" layoutY="200.0" prefHeight="17.0" prefWidth="65.0" text="Answer:" />
+            <TextField layoutX="75.0" layoutY="196.0" />
+            <Label fx:id="GDQUESTION" layoutX="26.0" layoutY="100.0" prefHeight="81.0" prefWidth="347.0" text="Question:" wrapText="true" />
+            <Button fx:id="GDNEWQUESTIONBTN" layoutX="75.0" layoutY="237.0" mnemonicParsing="false" onAction="#GDNEWQUESTION" text="New Question" />
+            <Button layoutX="246.0" layoutY="196.0" mnemonicParsing="false" onAction="#IGLREGISTERANSWERBTN" text="Register Answer" />
          </children>
       </AnchorPane>
    </children>
