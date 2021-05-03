@@ -4,14 +4,17 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Controller {
-@FXML  private AnchorPane MAINPANEL;
+    @FXML  private TextField studentAnswerTextField;
+    @FXML  private AnchorPane MAINPANEL;
 @FXML  private AnchorPane IGLQUESTIONSPANEL;
 @FXML  private AnchorPane GDQUESTIONSPANEL;
 @FXML  private AnchorPane IGLINFORMATIONPANEL;
@@ -22,10 +25,15 @@ public class Controller {
 @FXML  private Button GDNEWQUESTIONBTN;
 
 
+ArrayList<QuestionIGL> questions = new ArrayList<QuestionIGL>();
 
     public void QUESTIONSIGLNXTWNDW(ActionEvent actionEvent) {
         MAINPANEL.setVisible(false);
         IGLQUESTIONSPANEL.setVisible(true);
+
+        //for(int i = 0;i<questions.size()-1;i++){
+       //     System.out.println(questions.get(i).isCorrect());
+       // }
     }
 
 
@@ -69,25 +77,11 @@ public class Controller {
 
 
     public void IGLNEWQUESTION(){
-        Random generator = new Random();
-        Scanner keyboard = new Scanner(System.in);
-        double answer;
 
-
-        double Pressure = (generator.nextDouble() * 120) + 30;
-        double Moles = (generator.nextDouble() * 25);
-        double Volume = (generator.nextDouble() * 80) + 15;
-
-        double roundPressure = (double) Math.round(Pressure * 100) / 100;
-        Pressure = roundPressure;
-
-        double roundMoles = (double) Math.round(Moles * 100) / 100;
-        Moles = roundMoles;
-
-        double roundVolume = (double) Math.round(Volume * 100) / 100;
-        Volume = roundVolume;
-
-        IGLQUESTION.setText("At a pressure of " + Pressure + "atm, " + Moles + " Moles of an unknown compound are submerged in " + Volume + "L of water, what is the temperature of the room?");
+//if the student answer text box is not empty. save the answer and continue with the next questoin.
+       //you also want to clear the text box when you save the answer.
+        questions.add(new QuestionIGL());
+        IGLQUESTION.setText(questions.get(questions.size()-1).getQuestion());
 
     }
 
@@ -95,7 +89,10 @@ public class Controller {
 
 
     public void IGLREGISTERANSWERBTN(ActionEvent actionEvent) {
+      //if this text bos is not empty... dfo this. else do nothing.
+        questions.get(questions.size()-1).setStudentAnswer(Double.parseDouble(studentAnswerTextField.getText()));
     }
+
 
     public void GDNEWQUESTION(){
         Random generator = new Random();

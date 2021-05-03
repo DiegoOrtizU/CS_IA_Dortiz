@@ -4,36 +4,51 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class QuestionIGL {
+    Random generator = new Random();
+
+    double Pressure = (generator.nextDouble() * 120) + 30;
+    double roundPressure = (double) Math.round(Pressure * 100) / 100;
 
 
-    public static void main(String[] args) {
+    double Moles = (generator.nextDouble() * 25);
+    double roundMoles = (double) Math.round(Moles * 100) / 100;
+
+    double Volume = (generator.nextDouble() * 80) + 15;
+    double roundVolume = (double) Math.round(Volume * 100) / 100;
 
 
-        // Random number generating
+    String question = "At a pressure of " + Pressure + "atm, " + Moles + " Moles of an unknown compound are submerged in " + Volume + "L of water, what is the temperature of the room?";
 
-        Random generator = new Random();
-        Scanner keyboard = new Scanner(System.in);
-        double answer;
+    double answer = 32.0; //the calcualted number.
+    double studentAnswer;
 
 
-        double Pressure = (generator.nextDouble() * 120) + 30;
-        double Moles = (generator.nextDouble() * 25);
-        double Volume = (generator.nextDouble() * 80) + 15;
 
-        double roundPressure = (double) Math.round(Pressure * 100) / 100;
+    boolean correct = false;
+
+    public QuestionIGL() {
         Pressure = roundPressure;
-
-        double roundMoles = (double) Math.round(Moles * 100) / 100;
         Moles = roundMoles;
-
-        double roundVolume = (double) Math.round(Volume * 100) / 100;
         Volume = roundVolume;
+    }
 
-        System.out.println("At a pressure of " + Pressure + "atm, " + Moles + " Moles of an unknown compound are submerged in " + Volume + "L of water, what is the temperature of the room?");
+    public double getStudentAnswer() {
+        return studentAnswer;
+    }
 
+    public void setStudentAnswer(double studentAnswer) {
+        this.studentAnswer = studentAnswer;
+        if(studentAnswer == answer){
+            correct = true;
+        }
+    }
 
+    public String getQuestion() {
+        return question;
+    }
 
-
+    public boolean isCorrect() {
+        return correct;
     }
 
 }
