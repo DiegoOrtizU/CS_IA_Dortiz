@@ -25,9 +25,10 @@ public class Controller {
 @FXML  private Button GDNEWQUESTIONBTN;
 
 
-ArrayList<QuestionIGL> questions = new ArrayList<QuestionIGL>();
+ArrayList<QuestionIGL> questionsIGL = new ArrayList<>();
+ArrayList<QuestionGD> questionsGD = new ArrayList<>();
 
-    public void QUESTIONSIGLNXTWNDW(ActionEvent actionEvent) {
+    public void QuestionsIGLNxtWndw(ActionEvent actionEvent) {
         MAINPANEL.setVisible(false);
         IGLQUESTIONSPANEL.setVisible(true);
 
@@ -78,43 +79,26 @@ ArrayList<QuestionIGL> questions = new ArrayList<QuestionIGL>();
 
     public void IGLNEWQUESTION(){
 
-//if the student answer text box is not empty. save the answer and continue with the next questoin.
+//if the student answer text box is not empty. save the answer and continue with the next question.
        //you also want to clear the text box when you save the answer.
-        questions.add(new QuestionIGL());
-        IGLQUESTION.setText(questions.get(questions.size()-1).getQuestion());
-
+        questionsIGL.add(new QuestionIGL());
+        IGLQUESTION.setText(questionsIGL.get(questionsIGL.size()-1).getQuestionIGL());
     }
-
-
-
 
     public void IGLREGISTERANSWERBTN(ActionEvent actionEvent) {
       //if this text bos is not empty... dfo this. else do nothing.
-        questions.get(questions.size()-1).setStudentAnswer(Double.parseDouble(studentAnswerTextField.getText()));
+        questionsIGL.get(questionsIGL.size()-1).setStudentAnswer(Double.parseDouble(studentAnswerTextField.getText()));
     }
-
 
     public void GDNEWQUESTION(){
-        Random generator = new Random();
-        Scanner keyboard = new Scanner(System.in);
-        double answer;
-
-
-        double Temperature = (generator.nextDouble()*350)+273;
-        double Pressure = (generator.nextDouble()*120)+30;
-        double MolarMass = (generator.nextDouble()*150)+15;
-
-
-
-        double roundTemperature= (double) Math.round(Temperature*100)/100;
-        Temperature = roundTemperature;
-
-        double roundPressure= (double) Math.round(Pressure*100)/100;
-        Pressure = roundPressure;
-
-        double roundMolarMass= (double) Math.round(MolarMass*100)/100;
-        MolarMass = roundMolarMass;
-
-        GDQUESTION.setText("Determine the gas density of a gas at " + Temperature + "K at a pressure of " + Pressure + "atm and with a molar mass of " + MolarMass + "g/mol?");
+        //if the student answer text box is not empty. save the answer and continue with the next question.
+        //you also want to clear the text box when you save the answer.
+        questionsGD.add(new QuestionGD());
+        GDQUESTION.setText(questionsGD.get(questionsGD.size()-1).getQuestionGD());
     }
+    public void GDREGISTERANSWERBTN(ActionEvent actionEvent) {
+        //if this text bos is not empty... dfo this. else do nothing.
+        questionsGD.get(questionsGD.size()-1).setStudentAnswer(Double.parseDouble(studentAnswerTextField.getText()));
+    }
+
 }

@@ -19,7 +19,7 @@ public class QuestionIGL {
 
     String question = "At a pressure of " + Pressure + "atm, " + Moles + " Moles of an unknown compound are submerged in " + Volume + "L of water, what is the temperature of the room?";
 
-    double answer = 32.0; //the calcualted number.
+    double answer = (Pressure * Volume) / (Moles * 8.31); //the calculated number.
     double studentAnswer;
 
 
@@ -43,7 +43,7 @@ public class QuestionIGL {
         }
     }
 
-    public String getQuestion() {
+    public String getQuestionIGL() {
         return question;
     }
 

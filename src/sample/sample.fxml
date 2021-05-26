@@ -21,7 +21,7 @@
    <children>
       <AnchorPane fx:id="MAINPANEL" minWidth="400.0" prefHeight="300.0" prefWidth="400.0" visible="false">
          <children>
-            <Button layoutX="65.0" layoutY="180.0" mnemonicParsing="false" onAction="#QUESTIONSIGLNXTWNDW" text="Ideal Gas Law" />
+            <Button layoutX="65.0" layoutY="180.0" mnemonicParsing="false" onAction="#QuestionsIGLNxtWndw" text="Ideal Gas Law" />
             <Button layoutX="236.0" layoutY="180.0" mnemonicParsing="false" onAction="#INFORMATIONIGLNXTWNDW" text="Ideal Gas Law" />
             <Label layoutX="123.0" layoutY="56.0" text="Chemistry Practice Questions" />
             <Label layoutX="146.0" layoutY="74.0" />
@@ -31,7 +31,7 @@
             <Label layoutX="249.0" layoutY="142.0" text="Information" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="IGLQUESTIONSPANEL" prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane fx:id="IGLQUESTIONSPANEL" prefHeight="200.0" prefWidth="200.0" visible="false">
          <children>
             <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#QIGLMAINWINDOWBTN" text="Main Window" />
             <Label layoutX="136.0" layoutY="63.0" text="Ideal Gas Law Questions" />
@@ -86,7 +86,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="GDQUESTIONSPANEL" prefHeight="200.0" prefWidth="200.0" visible="false">
+      <AnchorPane fx:id="GDQUESTIONSPANEL" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#QGDMAINWINDOWBTN" text="Main Window" />
             <Label layoutX="136.0" layoutY="63.0" text="Ideal Gas Law Questions" />
@@ -94,7 +94,7 @@
             <TextField layoutX="75.0" layoutY="196.0" />
             <Label fx:id="GDQUESTION" layoutX="26.0" layoutY="100.0" prefHeight="81.0" prefWidth="347.0" text="Question:" wrapText="true" />
             <Button fx:id="GDNEWQUESTIONBTN" layoutX="75.0" layoutY="237.0" mnemonicParsing="false" onAction="#GDNEWQUESTION" text="New Question" />
-            <Button layoutX="246.0" layoutY="196.0" mnemonicParsing="false" onAction="#IGLREGISTERANSWERBTN" text="Register Answer" />
+            <Button layoutX="246.0" layoutY="196.0" mnemonicParsing="false" onAction="#GDREGISTERANSWERBTN" text="Register Answer" />
          </children>
       </AnchorPane>
    </children>
