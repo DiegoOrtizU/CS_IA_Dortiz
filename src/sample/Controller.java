@@ -94,11 +94,26 @@ ArrayList<QuestionGD> questionsGD = new ArrayList<>();
         //if the student answer text box is not empty. save the answer and continue with the next question.
         //you also want to clear the text box when you save the answer.
         questionsGD.add(new QuestionGD());
+        //
         GDQUESTION.setText(questionsGD.get(questionsGD.size()-1).getQuestionGD());
     }
     public void GDREGISTERANSWERBTN(ActionEvent actionEvent) {
         //if this text bos is not empty... dfo this. else do nothing.
-        questionsGD.get(questionsGD.size()-1).setStudentAnswer(Double.parseDouble(studentAnswerTextField.getText()));
+
+        if(studentAnswerTextField.getText().isEmpty()){
+            //empty. please write something
+        }else {
+
+            questionsGD.get(questionsGD.size() - 1).setStudentAnswer(Double.parseDouble(studentAnswerTextField.getText()));
+            if(questionsGD.get(questionsGD.size() - 1).isCorrect()){
+                //correct
+                System.out.println(questionsGD.get(questionsGD.size() - 1).isCorrect()); //true
+            }else{
+                //incorerct
+                System.out.println(questionsGD.get(questionsGD.size() - 1).isCorrect()); //false
+            }
+
+        }
     }
 
 }
