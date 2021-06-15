@@ -92,10 +92,10 @@
             <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#QGDMAINWINDOWBTN" text="Main Window" />
             <Label layoutX="136.0" layoutY="63.0" text="Gas Density Questions" />
             <Label layoutX="26.0" layoutY="200.0" prefHeight="17.0" prefWidth="65.0" text="Answer:" />
-            <TextField fx:id="GDStudentAnswerTextField" layoutX="75.0" layoutY="196.0" />
+            <TextField fx:id="GDStudentAnswerTextField" layoutX="75.0" layoutY="196.0" prefHeight="25.0" prefWidth="135.0" />
             <Label fx:id="GDQUESTION" layoutX="26.0" layoutY="100.0" prefHeight="81.0" prefWidth="347.0" text="Question:" wrapText="true" />
             <Button fx:id="GDNEWQUESTIONBTN" layoutX="75.0" layoutY="237.0" mnemonicParsing="false" onAction="#GDNEWQUESTION" text="New Question" />
-            <Button layoutX="246.0" layoutY="196.0" mnemonicParsing="false" onAction="#GDREGISTERANSWERBTN" text="Register Answer" />
+            <Button layoutX="217.0" layoutY="196.0" mnemonicParsing="false" onAction="#GDREGISTERANSWERBTN" text="Register Answer/New Question" />
             <Label layoutX="26.0" layoutY="276.0" text="Your Answers:" />
             <TextArea fx:id="studentAnswersTextArea" layoutX="10.0" layoutY="293.0" prefHeight="144.0" prefWidth="381.0" />
          </children>
