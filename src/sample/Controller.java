@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -13,7 +14,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Controller {
+    public TextArea studentAnswersTextArea;
     @FXML  private TextField studentAnswerTextField;
+    @FXML  private TextField GDStudentAnswerTextField;
     @FXML  private AnchorPane MAINPANEL;
 @FXML  private AnchorPane IGLQUESTIONSPANEL;
 @FXML  private AnchorPane GDQUESTIONSPANEL;
@@ -96,24 +99,25 @@ ArrayList<QuestionGD> questionsGD = new ArrayList<>();
         questionsGD.add(new QuestionGD());
         //
         GDQUESTION.setText(questionsGD.get(questionsGD.size()-1).getQuestionGD());
+        System.out.println(questionsGD.get(questionsGD.size() - 1).getAnswer());
     }
+
+    private StringBuilder GDfieldContent = new StringBuilder("");
     public void GDREGISTERANSWERBTN(ActionEvent actionEvent) {
         //if this text bos is not empty... dfo this. else do nothing.
 
-        if(studentAnswerTextField.getText().isEmpty()){
+        if(GDStudentAnswerTextField.getText().isEmpty()){
             //empty. please write something
+            System.out.println("You forgot to write your answer.");
         }else {
 
-            questionsGD.get(questionsGD.size() - 1).setStudentAnswer(Double.parseDouble(studentAnswerTextField.getText()));
-            if(questionsGD.get(questionsGD.size() - 1).isCorrect()){
-                //correct
-                System.out.println(questionsGD.get(questionsGD.size() - 1).isCorrect()); //true
-            }else{
-                //incorerct
-                System.out.println(questionsGD.get(questionsGD.size() - 1).isCorrect()); //false
-            }
+            questionsGD.get(questionsGD.size() - 1).setStudentAnswer(Double.parseDouble(GDStudentAnswerTextField.getText()));
+            GDfieldContent.append("Your answer to question " + questionsGD.size() + " was " + questionsGD.get(questionsGD.size() - 1).isCorrect()+"\n");
+            GDfieldContent.append("You said " + questionsGD.get(questionsGD.size() - 1).getStudentAnswer() + " and the answer is " + questionsGD.get(questionsGD.size() - 1).getAnswer()+"\n");
+            studentAnswersTextArea.setText(GDfieldContent.toString());
 
         }
+
     }
 
 }

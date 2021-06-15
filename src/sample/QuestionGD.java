@@ -15,13 +15,14 @@ public class QuestionGD {
     double MolarMass = (generator.nextDouble()*150)+15;
     double roundMolarMass= (double) Math.round(MolarMass*100)/100;
 
-
     String question = "Determine the gas density of a gas at " + Temperature + "K at a pressure of " + Pressure + "atm and with a molar mass of " + MolarMass + "g/mol?";
+
+    public double getAnswer() {
+        return answer;
+    }
 
     double answer = (MolarMass * Pressure)/(8.31 * Temperature); //the calculated number.
     double studentAnswer;
-
-
 
     boolean correct = false;
 
