@@ -116,8 +116,16 @@ ArrayList<QuestionGD> questionsGD = new ArrayList<>();
             GDfieldContent.append("You said " + questionsGD.get(questionsGD.size() - 1).getStudentAnswer() + " and the answer is " + questionsGD.get(questionsGD.size() - 1).getAnswer()+"\n");
             studentAnswersTextArea.setText(GDfieldContent.toString());
 
-        }
+            //clear the answer box
+            //if questionsGD size is less than 10 (9 questons) then
+                GDNEWQUESTION(); //make the next question
+            //else
+                //go to th enxt screen or display  the resttults bit.
 
+        }
+//complexity - how can you do something fancy to show the results., go through each question with a loop accessing the arraylist of objects.
+        //you could make a timer for the questions so that the user can see how long each question took. make an average of this on the results page.
+        //the results page cuild show that time for each question with the average under.
     }
 
 }
