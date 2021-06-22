@@ -19,8 +19,11 @@ public class QuestionIGL {
 
     String question = "At a pressure of " + Pressure + "atm, " + Moles + " Moles of an unknown compound are submerged in " + Volume + "L of water, what is the temperature of the room?";
 
-    double answer = (Pressure * Volume) / (Moles * 8.31); //the calculated number.
-    double studentAnswer;
+    public double getIGLAnswer() {
+        return IGLanswer;
+    }
+    double IGLanswer = (Pressure * Volume) / (Moles * 8.31); //the calculated number.
+    double IGLstudentAnswer;
 
 
 
@@ -32,13 +35,13 @@ public class QuestionIGL {
         Volume = roundVolume;
     }
 
-    public double getStudentAnswer() {
-        return studentAnswer;
+    public double getIGLStudentAnswer() {
+        return IGLstudentAnswer;
     }
 
-    public void setStudentAnswer(double studentAnswer) {
-        this.studentAnswer = studentAnswer;
-        if(studentAnswer == answer){
+    public void setIGLStudentAnswer(double IGLstudentAnswer) {
+        this.IGLstudentAnswer = IGLstudentAnswer;
+        if(IGLstudentAnswer == IGLanswer){
             correct = true;
         }
     }
