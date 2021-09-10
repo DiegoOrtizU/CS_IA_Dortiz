@@ -23,32 +23,32 @@
    <children>
       <AnchorPane fx:id="MAINPANEL" minWidth="400.0" prefHeight="300.0" prefWidth="400.0" visible="false">
          <children>
-            <Button layoutX="65.0" layoutY="180.0" mnemonicParsing="false" onAction="#QuestionsIGLNxtWndw" text="Ideal Gas Law" />
-            <Button layoutX="236.0" layoutY="180.0" mnemonicParsing="false" onAction="#INFORMATIONIGLNXTWNDW" text="Ideal Gas Law" />
+            <Button layoutX="65.0" layoutY="180.0" mnemonicParsing="false" onAction="#questionsIdealGasLawNextWindow" text="Ideal Gas Law" />
+            <Button layoutX="236.0" layoutY="180.0" mnemonicParsing="false" onAction="#informationIdealGasLawNextWindow" text="Ideal Gas Law" />
             <Label layoutX="123.0" layoutY="56.0" text="Chemistry Practice Questions" />
             <Label layoutX="146.0" layoutY="74.0" />
-            <Button layoutX="241.0" layoutY="233.0" mnemonicParsing="false" onAction="#INFORMATIONGDNXTWNDW" text="Gas Density" />
-            <Button layoutX="70.0" layoutY="233.0" mnemonicParsing="false" onAction="#QUESTIONSGDNXTWNDW" text="Gas Density" />
+            <Button layoutX="241.0" layoutY="233.0" mnemonicParsing="false" onAction="#informationGasDensityNextWindow" text="Gas Density" />
+            <Button layoutX="70.0" layoutY="233.0" mnemonicParsing="false" onAction="#questionsGasDensityNextWindow" text="Gas Density" />
             <Label layoutX="81.0" layoutY="141.0" text=" Questions" />
             <Label layoutX="249.0" layoutY="142.0" text="Information" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="IGLQUESTIONSPANEL" prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane fx:id="IdealGasLawQuestionsPanel" prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#QIGLMAINWINDOWBTN" text="Main Window" />
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#questionsIdealGasLawMainWindowButton" text="Main Window" />
             <Label layoutX="136.0" layoutY="63.0" text="Ideal Gas Law Questions" />
             <Label layoutX="26.0" layoutY="200.0" prefHeight="17.0" prefWidth="65.0" text="Answer:" />
             <TextField fx:id="IGLStudentAnswerTextField" layoutX="75.0" layoutY="196.0" />
-            <Label fx:id="IGLQUESTION" layoutX="26.0" layoutY="100.0" prefHeight="81.0" prefWidth="347.0" text="Question:" wrapText="true" />
-            <Button fx:id="IGLNEWQUESTIONBTN" layoutX="75.0" layoutY="237.0" mnemonicParsing="false" onAction="#IGLNEWQUESTION" text="New Question" />
-            <Button layoutX="246.0" layoutY="196.0" mnemonicParsing="false" onAction="#IGLREGISTERANSWERBTN" text="Register Answer" />
+            <Label fx:id="IdealGasLawQuestion" layoutX="26.0" layoutY="100.0" prefHeight="81.0" prefWidth="347.0" text="Question:" wrapText="true" />
+            <Button fx:id="IGLNEWQUESTIONBTN" layoutX="75.0" layoutY="237.0" mnemonicParsing="false" onAction="#IdealGasLawNewQuestion" text="New Question" />
+            <Button layoutX="246.0" layoutY="196.0" mnemonicParsing="false" onAction="#IdealGasLawRegisterAnswerButton" text="Register Answer" />
             <TextArea fx:id="IGLstudentAnswersTextArea" layoutX="14.0" layoutY="293.0" prefHeight="144.0" prefWidth="371.0" />
             <Text layoutX="26.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your answers:" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="GDINFORMATIONPANEL" prefHeight="200.0" prefWidth="200.0" visible="false">
+      <AnchorPane fx:id="GasDensityInformationPanel" prefHeight="200.0" prefWidth="200.0" visible="false">
          <children>
-            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#INFGDMAINWINDOWBTN" text="Main Window" />
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#informationGasDensityMainWindowButton" text="Main Window" />
             <Label layoutX="169.0" layoutY="75.0" text="Gas Density" />
             <Label layoutX="13.0" layoutY="122.0" prefHeight="123.0" prefWidth="181.0" text="Density is defined as the mass per unit volume of a substance. Since gases all occupy the same volume on a per mole basis, the density of a particular gas is dependent on its molar mass. " wrapText="true" />
             <Label layoutX="14.0" layoutY="245.0" prefHeight="144.0" prefWidth="171.0" text="A gas with a small molar mass will have a lower density than a gas with a large molar mass. Gas densities are typically reported in  g/L . Gas density can be calculated from molar mass and molar volume." wrapText="true" />
@@ -64,9 +64,9 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="IGLINFORMATIONPANEL" prefHeight="509.0" prefWidth="400.0" visible="false">
+      <AnchorPane fx:id="IdealGasLawInformationPanel" prefHeight="509.0" prefWidth="400.0" visible="false">
          <children>
-            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#INFIGLMAINWINDOWBTN" text="Main Window" />
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#informationIdealGasLawMainWindowButton" text="Main Window" />
             <Label layoutX="161.0" layoutY="52.0" text="Ideal Gases" />
             <Label layoutX="27.0" layoutY="96.0" prefHeight="107.0" prefWidth="154.0" text="Ideal gas molecules do not attract or repel each other. The only interaction between ideal gas molecules would be an elastic collision upon impact with each other or an elastic collision with the walls of the container." wrapText="true">
                <font>
@@ -90,15 +90,15 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="GDQUESTIONSPANEL" prefHeight="200.0" prefWidth="200.0" visible="false">
+      <AnchorPane fx:id="GasDensityQuestionsPanel" prefHeight="200.0" prefWidth="200.0" visible="false">
          <children>
-            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#QGDMAINWINDOWBTN" text="Main Window" />
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#questionsGasDensityMainWindowButton" text="Main Window" />
             <Label layoutX="136.0" layoutY="63.0" text="Gas Density Questions" />
             <Label layoutX="26.0" layoutY="200.0" prefHeight="17.0" prefWidth="65.0" text="Answer:" />
             <TextField fx:id="GDStudentAnswerTextField" layoutX="75.0" layoutY="196.0" prefHeight="25.0" prefWidth="135.0" />
-            <Label fx:id="GDQUESTION" layoutX="26.0" layoutY="100.0" prefHeight="81.0" prefWidth="347.0" text="Question:" wrapText="true" />
-            <Button fx:id="GDNEWQUESTIONBTN" layoutX="75.0" layoutY="237.0" mnemonicParsing="false" onAction="#GDNEWQUESTION" text="New Question" />
-            <Button layoutX="217.0" layoutY="196.0" mnemonicParsing="false" onAction="#GDREGISTERANSWERBTN" text="Register Answer" />
+            <Label fx:id="GasDensityQuestion" layoutX="26.0" layoutY="100.0" prefHeight="81.0" prefWidth="347.0" text="Question:" wrapText="true" />
+            <Button fx:id="GDNEWQUESTIONBTN" layoutX="75.0" layoutY="237.0" mnemonicParsing="false" onAction="#GasDensityNewQuestion" text="New Question" />
+            <Button layoutX="217.0" layoutY="196.0" mnemonicParsing="false" onAction="#GasDensityRegisterAnswerButton" text="Register Answer" />
             <Label layoutX="26.0" layoutY="276.0" text="Your Answers:" />
             <TextArea fx:id="GDstudentAnswersTextArea" layoutX="10.0" layoutY="293.0" prefHeight="144.0" prefWidth="381.0" />
          </children>

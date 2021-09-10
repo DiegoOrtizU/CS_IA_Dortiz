@@ -6,97 +6,104 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
 
 public class Controller {
     public TextArea GDstudentAnswersTextArea;
     public TextArea IGLstudentAnswersTextArea;
     @FXML  private TextField IGLStudentAnswerTextField;
     @FXML  private TextField GDStudentAnswerTextField;
-    @FXML  private AnchorPane MAINPANEL;
-@FXML  private AnchorPane IGLQUESTIONSPANEL;
-@FXML  private AnchorPane GDQUESTIONSPANEL;
-@FXML  private AnchorPane IGLINFORMATIONPANEL;
-@FXML  private AnchorPane GDINFORMATIONPANEL;
-@FXML  private Label IGLQUESTION;
-@FXML  private Button IGLNEWQUESTIONBTN;
-@FXML  private Label GDQUESTION;
-@FXML  private Button GDNEWQUESTIONBTN;
-    @FXML  private Label GDNEWQUESTION;
-    @FXML  private Label IGLNEWQUESTION;
-    @FXML  private Button IGLREGISTERANSWERBTN;
+    @FXML  private AnchorPane mainpanel;
+@FXML  private AnchorPane IdealGasLawQuestionsPanel;
+@FXML  private AnchorPane GasDensityQuestionsPanel;
+@FXML  private AnchorPane IdealGasLawInformationPanel;
+@FXML  private AnchorPane GasDensityInformationPanel;
+@FXML  private Label IdealGasLawQuestion;
+@FXML  private Label GasDensityQuestion;
+
 
 ArrayList<QuestionIGL> questionsIGL = new ArrayList<>();
 ArrayList<QuestionGD> questionsGD = new ArrayList<>();
 
-    public void QuestionsIGLNxtWndw(ActionEvent actionEvent) {
-        MAINPANEL.setVisible(false);
-        IGLQUESTIONSPANEL.setVisible(true);
+    public void questionsIdealGasLawNextWindow(ActionEvent actionEvent) {
+        mainpanel.setVisible(false);
+        IdealGasLawQuestionsPanel.setVisible(true);
+//This button changes the visibility of both panels,
+// therefore the Main Panel visibility is false and the IdealGasLawQuestionsPanel as true
 
-        //for(int i = 0;i<questions.size()-1;i++){
-       //     System.out.println(questions.get(i).isCorrect());
-       // }
     }
 
 
-    public void INFORMATIONGDNXTWNDW(ActionEvent actionEvent) {
-        MAINPANEL.setVisible(false);
-        GDINFORMATIONPANEL.setVisible(true);
+    public void informationGasDensityNextWindow(ActionEvent actionEvent) {
+        mainpanel.setVisible(false);
+        GasDensityInformationPanel.setVisible(true);
+//This button changes the visibility of both panels,
+// therefore the Main Panel visibility is false and the GasDensityInformationPanel as true
     }
 
-    public void INFORMATIONIGLNXTWNDW(ActionEvent actionEvent) {
-        MAINPANEL.setVisible(false);
-        IGLINFORMATIONPANEL.setVisible(true);
+    public void informationIdealGasLawNextWindow(ActionEvent actionEvent) {
+        mainpanel.setVisible(false);
+        IdealGasLawInformationPanel.setVisible(true);
+//This button changes the visibility of both panels,
+// therefore the Main Panel visibility is false and the IdealGasLawInformationPanel as true
     }
 
-    public void QUESTIONSGDNXTWNDW(ActionEvent actionEvent) {
-        MAINPANEL.setVisible(false);
-        GDQUESTIONSPANEL.setVisible(true);
-    }
-
-
-    public void QIGLMAINWINDOWBTN(ActionEvent actionEvent) {
-        MAINPANEL.setVisible(true);
-        IGLQUESTIONSPANEL.setVisible(false);
-    }
-
-
-    public void QGDMAINWINDOWBTN(ActionEvent actionEvent) {
-        MAINPANEL.setVisible(true);
-        GDQUESTIONSPANEL.setVisible(false);
-    }
-
-    public void INFIGLMAINWINDOWBTN(ActionEvent actionEvent) {
-        MAINPANEL.setVisible(true);
-        IGLINFORMATIONPANEL.setVisible(false);
-    }
-
-    public void INFGDMAINWINDOWBTN(ActionEvent actionEvent) {
-        MAINPANEL.setVisible(true);
-        GDINFORMATIONPANEL.setVisible(false);
+    public void questionsGasDensityNextWindow(ActionEvent actionEvent) {
+        mainpanel.setVisible(false);
+        GasDensityQuestionsPanel.setVisible(true);
+//This button changes the visibility of both panels,
+// therefore the Main Panel visibility is false and the GasDensityQuestionsPanel as true
     }
 
 
+    public void questionsIdealGasLawMainWindowButton(ActionEvent actionEvent) {
+        mainpanel.setVisible(true);
+        IdealGasLawQuestionsPanel.setVisible(false);
+//This button changes the visibility of both panels,
+// therefore the Main Panel visibility is true  and the IdealGawLawQuestionsPanel as false
+    }
 
-    public void IGLNEWQUESTION(){
+
+    public void questionsGasDensityMainWindowButton(ActionEvent actionEvent) {
+        mainpanel.setVisible(true);
+        GasDensityQuestionsPanel.setVisible(false);
+//This button changes the visibility of both panels,
+// therefore the Main Panel visibility is true  and the GasDensityQuestionsPanel as false
+    }
+
+    public void informationIdealGasLawMainWindowButton(ActionEvent actionEvent) {
+        mainpanel.setVisible(true);
+        IdealGasLawInformationPanel.setVisible(false);
+//This button changes the visibility of both panels,
+// therefore the Main Panel visibility is true  and the IdealGasLawInformationPanel as false
+    }
+
+    public void informationGasDensityMainWindowButton(ActionEvent actionEvent) {
+        mainpanel.setVisible(true);
+        GasDensityInformationPanel.setVisible(false);
+//This button changes the visibility of both panels,
+// therefore the Main Panel visibility is true  and the GasDensityInformationPanel as false
+    }
+
+
+
+    public void IdealGasLawNewQuestion(){
 
 //if the student answer text box is not empty. save the answer and continue with the next question.
        //you also want to clear the text box when you save the answer.
         questionsIGL.add(new QuestionIGL());
         //
-        IGLQUESTION.setText(questionsIGL.get(questionsIGL.size()-1).getQuestionIGL());
+        IdealGasLawQuestion.setText(questionsIGL.get(questionsIGL.size()-1).getQuestionIGL());
         System.out.println(questionsIGL.get(questionsIGL.size() - 1).getIGLAnswer());
+        //By pressing a button new question of the selected topic is generated
     }
     private StringBuilder IGLfieldContent = new StringBuilder("");
 
-    public void IGLREGISTERANSWERBTN(ActionEvent actionEvent) {
+    public void IdealGasLawRegisterAnswerButton(ActionEvent actionEvent) {
         if (IGLStudentAnswerTextField.getText().isEmpty()) {
-            //empty. please write something
+            //If its empty (There is no answer), it displays "You forgot your answer"
             System.out.println("You forgot to write your answer.");
         } else {
 
@@ -104,6 +111,8 @@ ArrayList<QuestionGD> questionsGD = new ArrayList<>();
             IGLfieldContent.append("Your answer to question " + questionsIGL.size() + " was " + questionsIGL.get(questionsIGL.size() - 1).isCorrect() + "\n");
             IGLfieldContent.append("You said " + questionsIGL.get(questionsIGL.size() - 1).getIGLStudentAnswer() + " and the answer is " + questionsIGL.get(questionsIGL.size() - 1).getIGLAnswer() + "\n");
             IGLstudentAnswersTextArea.setText(IGLfieldContent.toString());
+            //I use a field content in order to store my clients answer.
+            //Therefore each questions answer is displayed, as well as my clients answer and if it a wrong or right answer.
         }
 
     }
@@ -112,11 +121,11 @@ ArrayList<QuestionGD> questionsGD = new ArrayList<>();
 
 
 
-    public void GDREGISTERANSWERBTN(ActionEvent actionEvent) {
-        //if this text bos is not empty... dfo this. else do nothing.
+    public void GasDensityRegisterAnswerButton(ActionEvent actionEvent) {
+        //if this text box is not empty therefore it won't register an ansewr, and the programme will remain the same until and answer is displayed.
 
         if(GDStudentAnswerTextField.getText().isEmpty()){
-            //empty. please write something
+            //If its empty (There is no answer), it displays "You forgot your answer"
             System.out.println("You forgot to write your answer.");
         }else {
 
@@ -125,23 +134,21 @@ ArrayList<QuestionGD> questionsGD = new ArrayList<>();
             GDfieldContent.append("You said " + questionsGD.get(questionsGD.size() - 1).getStudentAnswer() + " and the answer is " + questionsGD.get(questionsGD.size() - 1).getAnswer()+"\n");
             GDstudentAnswersTextArea.setText(GDfieldContent.toString());
 
-            //clear the answer box
-            //if questionsGD size is less than 10 (9 questions) then
-            //GDNEWQUESTION(); //make the next question
-            //else
-            //go to th next screen or display  the resultss bit.
+            //I use a field content in order to store my clients answer.
+            //Therefore each questions answer is displayed, as well as my clients answer and if it
 
         }
 
     }
 
-    public void GDNEWQUESTION(ActionEvent actionEvent) {
+    public void GasDensityNewQuestion(ActionEvent actionEvent) {
         //if the student answer text box is not empty. save the answer and continue with the next question.
         //you also want to clear the text box when you save the answer.
         questionsGD.add(new QuestionGD());
         //
-        GDQUESTION.setText(questionsGD.get(questionsGD.size()-1).getQuestionGD());
+        GasDensityQuestion.setText(questionsGD.get(questionsGD.size()-1).getQuestionGD());
         System.out.println(questionsGD.get(questionsGD.size() - 1).getAnswer());
+        //By pressing a button new question of the selected topic is generated
     }
 
     private StringBuilder GDfieldContent = new StringBuilder("");
@@ -149,7 +156,3 @@ ArrayList<QuestionGD> questionsGD = new ArrayList<>();
     }
 
 
-//Additions:
-//complexity - how can you do something fancy to show the results., go through each question with a loop accessing the arraylist of objects.
-//you could make a timer for the questions so that the user can see how long each question took. make an average of this on the results page.
-//the results page cuild show that time for each question with the average under.
