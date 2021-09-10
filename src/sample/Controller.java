@@ -122,7 +122,7 @@ ArrayList<QuestionGD> questionsGD = new ArrayList<>();
 
 
     public void GasDensityRegisterAnswerButton(ActionEvent actionEvent) {
-        //if this text box is not empty therefore it won't register an ansewr, and the programme will remain the same until and answer is displayed.
+        //if this text box is not empty therefore it won't register an answer, and the programme will remain the same until and answer is displayed.
 
         if(GDStudentAnswerTextField.getText().isEmpty()){
             //If its empty (There is no answer), it displays "You forgot your answer"

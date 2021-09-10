@@ -21,7 +21,7 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <AnchorPane fx:id="MAINPANEL" minWidth="400.0" prefHeight="300.0" prefWidth="400.0" visible="false">
+      <AnchorPane fx:id="mainpanel" minWidth="400.0" prefHeight="300.0" prefWidth="400.0" visible="false">
          <children>
             <Button layoutX="65.0" layoutY="180.0" mnemonicParsing="false" onAction="#questionsIdealGasLawNextWindow" text="Ideal Gas Law" />
             <Button layoutX="236.0" layoutY="180.0" mnemonicParsing="false" onAction="#informationIdealGasLawNextWindow" text="Ideal Gas Law" />
@@ -40,7 +40,7 @@
             <Label layoutX="26.0" layoutY="200.0" prefHeight="17.0" prefWidth="65.0" text="Answer:" />
             <TextField fx:id="IGLStudentAnswerTextField" layoutX="75.0" layoutY="196.0" />
             <Label fx:id="IdealGasLawQuestion" layoutX="26.0" layoutY="100.0" prefHeight="81.0" prefWidth="347.0" text="Question:" wrapText="true" />
-            <Button fx:id="IGLNEWQUESTIONBTN" layoutX="75.0" layoutY="237.0" mnemonicParsing="false" onAction="#IdealGasLawNewQuestion" text="New Question" />
+            <Button fx:id="IdealGasLawNewQuestionButton" layoutX="75.0" layoutY="237.0" mnemonicParsing="false" onAction="#IdealGasLawNewQuestion" text="New Question" />
             <Button layoutX="246.0" layoutY="196.0" mnemonicParsing="false" onAction="#IdealGasLawRegisterAnswerButton" text="Register Answer" />
             <TextArea fx:id="IGLstudentAnswersTextArea" layoutX="14.0" layoutY="293.0" prefHeight="144.0" prefWidth="371.0" />
             <Text layoutX="26.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your answers:" />
@@ -97,7 +97,7 @@
             <Label layoutX="26.0" layoutY="200.0" prefHeight="17.0" prefWidth="65.0" text="Answer:" />
             <TextField fx:id="GDStudentAnswerTextField" layoutX="75.0" layoutY="196.0" prefHeight="25.0" prefWidth="135.0" />
             <Label fx:id="GasDensityQuestion" layoutX="26.0" layoutY="100.0" prefHeight="81.0" prefWidth="347.0" text="Question:" wrapText="true" />
-            <Button fx:id="GDNEWQUESTIONBTN" layoutX="75.0" layoutY="237.0" mnemonicParsing="false" onAction="#GasDensityNewQuestion" text="New Question" />
+            <Button fx:id="GasDensityNewQuestionButton" layoutX="75.0" layoutY="237.0" mnemonicParsing="false" onAction="#GasDensityNewQuestion" text="New Question" />
             <Button layoutX="217.0" layoutY="196.0" mnemonicParsing="false" onAction="#GasDensityRegisterAnswerButton" text="Register Answer" />
             <Label layoutX="26.0" layoutY="276.0" text="Your Answers:" />
             <TextArea fx:id="GDstudentAnswersTextArea" layoutX="10.0" layoutY="293.0" prefHeight="144.0" prefWidth="381.0" />
